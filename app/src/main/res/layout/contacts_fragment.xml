@@ -14,6 +14,7 @@
         android:layout_marginTop="@dimen/main_margin_1x"
         android:layout_marginEnd="@dimen/main_margin_1x"
         android:background="@null"
+        android:backgroundTint="@color/grey"
         android:drawableEnd="@drawable/ic_search_black_24dp"
         android:hint="@string/contacts_txtSearch"
         android:inputType="textPersonName"
@@ -30,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/main_margin_1x"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSearch"
         tools:listitem="@layout/contacts_fragment_item" />
