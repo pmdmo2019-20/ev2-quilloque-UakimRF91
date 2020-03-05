@@ -1,4 +1,4 @@
-package es.iessaladillo.pedrojoya.quilloque.data.entity
+package es.iessaladillo.pedrojoya.quilloque.data.pojo
 
 data class RecentWithContact (
     val name: String,

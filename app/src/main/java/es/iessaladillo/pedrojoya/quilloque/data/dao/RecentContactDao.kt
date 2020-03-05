@@ -3,7 +3,7 @@ package es.iessaladillo.pedrojoya.quilloque.data.dao
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
-import es.iessaladillo.pedrojoya.quilloque.data.entity.RecentWithContact
+import es.iessaladillo.pedrojoya.quilloque.data.pojo.RecentWithContact
 
 @Dao
 interface RecentContactDao {
