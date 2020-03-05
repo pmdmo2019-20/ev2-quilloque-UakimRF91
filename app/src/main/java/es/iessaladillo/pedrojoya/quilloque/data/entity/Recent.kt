@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class Recent (
     @PrimaryKey(autoGenerate = true)
     val recentId: Long = 0,
-    var recentPhoneNumber: String,
-    val recentCallType: String,
-    val recentDate: String,
-    val recentHour: String
+    var recentPhoneNumber: String?,
+    val recentCallType: String?,
+    val recentDate: String?,
+    val recentHour: String?
 )

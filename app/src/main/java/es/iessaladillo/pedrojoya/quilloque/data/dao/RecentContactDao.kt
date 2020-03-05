@@ -8,6 +8,6 @@ import es.iessaladillo.pedrojoya.quilloque.data.pojo.RecentWithContact
 @Dao
 interface RecentContactDao {
 
-    @Query("SELECT COALESCE(contactName, ''), recentPhoneNumber, recentCallType, recentDate, recentHour FROM Recent LEFT JOIN Contact ON recentPhoneNumber = contactPhoneNumber ORDER BY recentId")
+    @Query("SELECT COALESCE(contactName, '') as name, recentPhoneNumber as phoneNumber, recentCallType as callType, recentDate as date, recentHour as hour FROM Recent LEFT JOIN Contact ON recentPhoneNumber = contactPhoneNumber LIMIT 20")
     fun queryAllRecentContact(): LiveData<List<RecentWithContact>>
 }

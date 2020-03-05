@@ -1,0 +1,90 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "90ec39f3e43138a5778b6e6be157d1f0",
+    "entities": [
+      {
+        "tableName": "Contact",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`contactId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contactName` TEXT, `contactPhoneNumber` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "contactId",
+            "columnName": "contactId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contactName",
+            "columnName": "contactName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contactPhoneNumber",
+            "columnName": "contactPhoneNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "contactId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Recent",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recentId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `recentPhoneNumber` TEXT, `recentCallType` TEXT, `recentDate` TEXT, `recentHour` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "recentId",
+            "columnName": "recentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recentPhoneNumber",
+            "columnName": "recentPhoneNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recentCallType",
+            "columnName": "recentCallType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recentDate",
+            "columnName": "recentDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recentHour",
+            "columnName": "recentHour",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "recentId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '90ec39f3e43138a5778b6e6be157d1f0')"
+    ]
+  }
+}

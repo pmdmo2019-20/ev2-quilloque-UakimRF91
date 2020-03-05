@@ -9,6 +9,22 @@
         android:id="@+id/dialDestination"
         android:name="es.iessaladillo.pedrojoya.quilloque.ui.dial.DialFragment"
         android:label="@string/dial_title"
-        tools:layout="@layout/dial_fragment"/>
+        tools:layout="@layout/dial_fragment" />
+
+    <fragment
+        android:id="@+id/contacDestination"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.contacts.ContactsFragment"
+        android:label="@string/contacts_title"
+        tools:layout="@layout/contacts_fragment">
+        <action
+            android:id="@+id/navigateToAddContact"
+            app:destination="@id/addContactDestination" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addContactDestination"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.contacts.add.AddContact"
+        android:label="@string/contact_creation_title"
+        tools:layout="@layout/contact_creation_fragment" />
 
 </navigation>
